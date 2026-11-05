@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en" translate="no">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google" content="notranslate">
+  <title>Monty | Luis Fernando Téllez, video editor</title>
+  <meta name="description" content="Video editing, motion graphics and AI-built visuals by Luis Fernando Téllez Montero (Monty), Sucre, Bolivia.">
+  <meta property="og:title" content="Monty | Video editor portfolio">
+  <meta property="og:description" content="Video editing, motion graphics and AI-built visuals.">
+  <meta property="og:image" content="og.jpg">
+  <meta name="theme-color" content="#0b0813">
+  <link rel="icon" href="favicon.png">
+  <link rel="preload" as="image" href="hero.webp">
+  <script type="module" crossorigin src="./assets/index-BG3i-d2z.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-CCZ9qsPh.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="#stage" aria-label="Monty"><span class="logo" data-logo></span><b>Monty</b></a>
+    <nav>
+      <a href="#work" data-t="navWork"></a>
+      <a href="#about" data-t="navAbout"></a>
+      <span class="langs" role="group" aria-label="Language">
+        <button type="button" data-setlang="en">EN</button>
+        <button type="button" data-setlang="es">ES</button>
+      </span>
+      <a class="nav-cta" href="#contact" data-t="navContact"></a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="stage" class="stage">
+    <div id="work" class="work">
+      <canvas id="wall-gl" aria-hidden="true"></canvas>
+      <div class="filters" id="filters" role="group" aria-label="Filter"></div>
+      <div class="now">
+        <button type="button" class="round" id="wall-prev" aria-label="Previous"><i data-icon="left"></i></button>
+        <div class="now-copy" aria-live="polite">
+          <span id="now-c" class="now-c"></span>
+          <h2 id="now-t"></h2>
+          <p id="now-d"></p>
+        </div>
+        <button type="button" class="round" id="wall-next" aria-label="Next"><i data-icon="right"></i></button>
+        <button type="button" class="btn small" id="now-open"><span data-t="open"></span><i data-icon="arrow"></i></button>
+      </div>
+      <p class="hint" data-t="workHint"></p>
+    </div>
+    <div id="hero" class="hero">
+      <img class="hero-bg" src="hero.webp" alt="" width="1536" height="864" fetchpriority="high">
+      <canvas id="hero-gl" aria-hidden="true"></canvas>
+      <div class="hero-copy">
+        <p class="kicker" data-t="heroName"></p>
+        <h1 data-t="heroTitle"></h1>
+        <p class="sub" data-t="heroSub"></p>
+        <a class="btn" href="#work"><span data-t="heroCta"></span><i data-icon="arrow"></i></a>
+      </div>
+    </div>
+    <canvas id="pixels" aria-hidden="true"></canvas>
+    </section>
+
+    <section class="index">
+      <h2 class="reveal" data-t="indexTitle"></h2>
+      <div class="grid" id="grid"></div>
+    </section>
+
+    <section class="case">
+      <div class="case-frame reveal"><video id="case-video" muted loop playsinline preload="none"></video></div>
+      <div class="case-copy reveal">
+        <h2 data-t="caseTitle"></h2>
+        <p data-t="caseBody"></p>
+        <ul id="case-list"></ul>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <h2 class="reveal" data-t="aboutTitle"></h2>
+      <p class="about-body reveal" data-t="aboutBody"></p>
+      <div class="facts reveal">
+        <div><h3 data-t="toolsEdit"></h3><ul id="tools-edit"></ul></div>
+        <div><h3 data-t="toolsAi"></h3><ul id="tools-ai"></ul></div>
+        <div><h3 data-t="toolsLang"></h3><ul id="langs"></ul></div>
+      </div>
+      <div class="certs reveal">
+        <h3 data-t="certs"></h3>
+        <ul id="certs"></ul>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <span class="logo big" data-logo></span>
+      <h2 class="reveal" data-t="contactTitle"></h2>
+      <p class="reveal" data-t="contactBody"></p>
+      <div class="links reveal">
+        <a id="wa" class="btn" target="_blank" rel="noopener"><i data-icon="wa"></i><span id="wa-text"></span></a>
+        <a id="mail" class="btn ghost"><i data-icon="mail"></i><span id="mail-text"></span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot"><p data-t="footer"></p></footer>
+
+  <dialog id="modal" class="modal">
+    <button type="button" class="round close" id="m-close"><i data-icon="x"></i></button>
+    <div class="m-body">
+      <button type="button" class="round" id="m-prev"><i data-icon="left"></i></button>
+      <video id="m-video" controls playsinline></video>
+      <div class="m-info">
+        <span id="m-c" class="now-c"></span>
+        <h2 id="m-t"></h2>
+        <p id="m-d"></p>
+        <small id="m-l"></small>
+      </div>
+      <button type="button" class="round" id="m-next"><i data-icon="right"></i></button>
+    </div>
+  </dialog>
+</body>
+</html>
